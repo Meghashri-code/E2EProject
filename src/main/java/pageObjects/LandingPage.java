@@ -15,6 +15,8 @@ public class LandingPage {
 	private By navbar = By.cssSelector("ul[class='nav navbar-nav navbar-right']");
 	
 	private By banner = By.cssSelector("div[class*='video-banner'] h3");
+	
+
 
 
 

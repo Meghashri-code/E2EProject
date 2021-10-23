@@ -27,6 +27,7 @@ public class HomePage extends base{
 	    driver.manage().window().maximize();
 	    LandingPage lp = new LandingPage(driver);
 		lp.Login().click();
+		
 		log.info("successfully initialized the browser before 2 combinations of test");
 	    
 	}
@@ -43,6 +44,8 @@ public class HomePage extends base{
 		pg.Password().sendKeys(pswd);
 		log.info(text);
 		pg.submit().click();	
+		System.out.println(pg.errormsg().getText());
+		
 		
 		
 	}

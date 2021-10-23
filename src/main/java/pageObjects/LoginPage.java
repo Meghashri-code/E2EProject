@@ -9,13 +9,15 @@ public class LoginPage {
 	
 	public WebDriver driver;
 	
-	By email = By.id("user_email");
+	private By email = By.id("user_email");
 	
-	By password = By.id("user_password");
+	private By password = By.id("user_password");
 	
-	By submit = By.cssSelector("input.btn.btn-primary.btn-md.login-button");
+	private By submit = By.cssSelector("input.btn.btn-primary.btn-md.login-button");
 	
-	By forgotlink = By.cssSelector("a.link-below-button");
+	private By forgotlink = By.cssSelector("a.link-below-button");
+	
+	private By error = By.cssSelector("div.alert.alert-danger.alert-show.mb-5");
 	
 
 	public LoginPage(WebDriver driver2) {
@@ -47,4 +49,10 @@ public class LoginPage {
 	{
 		return driver.findElement(forgotlink);
 	}
+	
+	public WebElement errormsg()
+	{
+		return driver.findElement(error);
+	}
+	
 }
